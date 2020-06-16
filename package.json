@@ -1,0 +1,34 @@
+{
+  "name": "circuit-breaker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "npm run build && node test/koa.js",
+    "eslint": "eslint src --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pea-jj/circuit-breaker.git"
+  },
+  "author": "huangjie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pea-jj/circuit-breaker/issues"
+  },
+  "homepage": "https://github.com/pea-jj/circuit-breaker#readme",
+  "dependencies": {
+    "koa": "^2.12.0",
+    "koa-router": "^8.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/parser": "^3.0.1",
+    "eslint": "^7.1.0",
+    "eslint-config-alloy": "^3.7.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.3"
+  }
+}
