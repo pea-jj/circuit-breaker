@@ -62,12 +62,6 @@ class Master extends EventEmitter {
         this.circuitAgentWorker.send(data);
       }
     });
-    // cluster.on("fork", (worker) => {
-    //   console.log('worker', worker.process.pid, worker.id)
-    //   worker.on("message", (data) => {
-    //     console.log(data, 'mmmm')
-    //   })
-    // })
   }
 
 

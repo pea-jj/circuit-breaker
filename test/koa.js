@@ -12,7 +12,7 @@ console.log('启动成功')
 const action = async (ctx) => {
   await new Promise(resolve => {
     setTimeout(() => {
-      console.log('sleep');
+      console.log('执行action');
       resolve();
     }, 3000)
   })

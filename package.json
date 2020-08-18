@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "test": "npm run build && node test/koa.js",
+    "test-cluster": "npm run build && node test/koa-cluster.js",
     "eslint": "eslint src --ext .ts"
   },
   "repository": {

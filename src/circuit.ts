@@ -52,7 +52,7 @@ class Circuit {
     // 检查断路器状态 是否需要半开
     this.healthCheck();
     // 
-    console.log(this.status, this.halfOpenSemaphore);
+    console.log('circuit breaker status', this.status, 'semaphore', this.halfOpenSemaphore);
     if (this.circuitClose) {
       return this.handleNormalRequest(params);
     } else if (this.circuitOpen || (this.circuitHalfOpen && this.halfOpenSemaphore > 0)) {
@@ -80,7 +80,7 @@ class Circuit {
       }
       const endTime = +new Date();
       const diff = endTime - startTime;
-      console.log(diff)
+      console.log('请求时间',diff)
       if (diff > timeout) {
         this.timeoutCount ++;
       } else {

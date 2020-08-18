@@ -47,7 +47,7 @@ class Circuit {
     // 检查断路器状态 是否需要半开
     this.healthCheck();
     // 
-    console.log('status: ', this.status, 'semaphore', this.halfOpenSemaphore);
+    console.log('circuit breaker status', this.status, 'semaphore', this.halfOpenSemaphore);
     if (this.circuitClose) {
       this.handleNormalRequest();
       excuteAction();

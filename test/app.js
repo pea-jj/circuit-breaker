@@ -12,7 +12,7 @@ console.log('appworker启动成功')
 const action = async (ctx) => {
   await new Promise(resolve => {
     setTimeout(() => {
-      console.log(process.pid, '执行', 'action'); 
+      console.log('进程', process.pid, '执行action'); 
       resolve();
     }, 3000)
   })
@@ -20,7 +20,7 @@ const action = async (ctx) => {
 }
 
 const fallBack = async (ctx) => { 
-  console.log(process.pid, '执行', 'fall back'); 
+  console.log('进程', process.pid, '执行fall back'); 
   ctx.body = 'fall back';
 }
 const param = {
